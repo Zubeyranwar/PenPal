@@ -14,27 +14,27 @@ const Heading = () => {
   return (
     <div className="max-w-3xl space-y-4 mt-[150px]">
       <h1 className="text-3xl sm:text-5xl md:text-6xl font-bold">
-        Your Ideas, Documents, & Plans. Unified. Welcome to <span className="underline">Jotion</span>
+        Your Ideas, Documents, & Plans. Unified. Welcome to <span className="underline">PenPal</span>
       </h1>
       <h3 className="text-base sm:text-xl md:text-2xl font-medium">
         Jotion is the connected workspace where <br />
         better, faster work happens.
       </h3>
       {isLoading && (
-        <div>
+        <div className="w-full flex justify-center items-center">
           <Spinner size="lg"/>
         </div>
       )}
       {isAuthenticated && !isLoading && (
         <Button>
-          <Link href="/documents">Enter Jotion</Link>
+          <Link href="/documents">Enter PenPal</Link>
           <ArrowRight className="w-4 h-4 ml-2"/>
         </Button>
       )}
       {!isAuthenticated && !isLoading && (
         <SignInButton mode="modal">
           <Button> 
-            Get Jotion free
+            Get PenPal free
             <ArrowRight className="h-4 w-4 ml-2" />
           </Button>
         </SignInButton>
